@@ -1,0 +1,209 @@
+\documentclass[compress, blue]{beamer}
+\usetheme{Warsaw}
+\usecolortheme{orchid}
+\beamersetuncovermixins{\opaqueness<1>{25}}{\opaqueness<2->{15}}
+
+\usepackage{listings}
+
+% German
+\usepackage[ngerman]{babel}
+
+% Read input file as UTF-8
+\usepackage[utf8]{inputenc}
+% Font encoding: T1 for european languages
+
+\usepackage[T1]{fontenc}
+% Textcomp for 128 more characters (including EUR)
+\usepackage{textcomp}
+
+% Latin Modern instead of Computer Modern
+\usepackage{lmodern}
+
+\usepackage{graphicx}
+
+\title{Extrem Programming}
+\subtitle{Gründe, Methoden und Prozesse}
+\author{Nick Zbinden}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}\frametitle{Extrem Programming?}
+  \includegraphics{sky.jpeg}
+\end{frame}
+
+\begin{frame}
+  \includegraphics[width=10cm]{lan.jpg}
+\end{frame}
+
+\begin{frame}
+  \begin{quote}
+    Extrem Programming ist der Einzug von Wahrheit und Vernunft in die Software Entwicklung.
+  \end{quote}
+  Pavel Maier
+\end{frame}
+
+\begin{frame}\frametitle{Probleme}
+  \includegraphics[width=10cm]{ep.jpg}  
+\end{frame}
+
+\begin{frame}\frametitle{Probleme}
+  \begin{itemize}
+  \item Software wird nicht rechtzeitig fertig. \pause
+  \item Entwicklung wird fürhzeitig beendet. \pause
+  \item Änderungsaufwand wird zu gross. \pause
+  \item Software wird wegen Unzuverlässigkeit nicht genutzt \pause
+  \item Kunde weiss nicht was er will! \pause
+  \item Kunde ändert seine Meinung.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Ängste}
+  \begin{itemize}
+  \item Kunde \pause
+    \begin{itemize}
+    \item Kriegt nicht was er will \pause
+    \item Zahlt zu viel \pause
+    \item Pläne sind Märchen.  \pause
+    \item Kann Anforderungen nicht ändern. 
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Ängste}
+  \begin{itemize}
+  \item Entwickler \pause
+    \begin{itemize}
+    \item Kunde verlangt zu viel. \pause
+    \item Verantwortung aber keine Autorität. \pause
+    \item Qualität Opfern für Termine. \pause
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \includegraphics[width=10cm]{werte.png}
+\end{frame}
+
+\begin{frame}\frametitle{Best Practises}
+  \begin{itemize}
+  \item Best Practieses \pause
+    \begin{itemize}
+    \item Keine Code-Besitzer\pause
+    \item Refactoring \pause
+    \item Keine Überstunden \pause
+    \item Small releases
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Pair Programming}
+    \includegraphics[width=5cm]{pair.jpg}
+\end{frame}
+
+\begin{frame}\frametitle{Pair Programming}
+  \begin{itemize}
+  \item Keine Know How Monople (Bus-Faktor) \pause
+  \item Kürzere Einareitungszeiten \pause
+  \item Weniger Ablenkung beim Programmieren \pause
+  \item \textit{Besserer Code} \pause
+  \item Studien
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Test Driven Development}
+  \begin{itemize}
+  \item Jede Funktion wird getestet.  \pause
+  \item Test wird zuerst geschrieben. \pause
+  \item Beim Einchecken wird alles getestet \pause
+  \item Kompleze System einfach ändern\pause
+  \item Performence tests, Securety tests, Scalierungs tests
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Rollen}
+  \begin{tabular}{l l}
+    \hline
+    Rollen & Aufgaben \\
+    \hline
+    Kunde & Entscheidet, was gemacht wird, gibt Rückmeldung \\
+    Entwickler &  Entwickelt das Produkt \\
+    Projektmanager & Führung des Teams \\
+    Benutzer & Wird das zu erstellende Produkt nutzen \\
+    \hline
+  \end{tabular}
+\end{frame}
+
+\begin{frame}\frametitle{Prozesse}
+  \includegraphics[width=8cm]{loop2.jpg}
+\end{frame}
+
+\begin{frame}\frametitle{Release Plan}
+  \begin{itemize}
+  \item alle 2-3 Monate
+  \item User Storys
+    \begin{itemize}
+    \item Karten erstellen
+    \item Aufwand
+    \item Risiko
+    \item usw.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{User Storys}
+    \includegraphics[width=8cm]{userstorys.jpg}
+\end{frame}
+
+\begin{frame}\frametitle{User Storys}
+    \includegraphics[width=8cm]{cards.jpg}
+\end{frame}
+
+\begin{frame}\frametitle{Iterations Plan}
+  \begin{itemize}
+  \item alle 1-3 Wochen
+  \item Es wird bestimmt welech Users Storys gemacht werden
+  \item User Storys werden in Engineerings Tasks unterteilt.
+    \begin{itemize}
+    \item Technische Anweisung
+    \end{itemize}
+  \item Kunde kann jederzeit Storys anpassen, neue erstellen oder
+    wegwerfen.
+  \item Statistiken über letzte Iteration. Velocity!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Engineering Tasks}
+    \includegraphics[width=7cm]{etask.jpg}
+\end{frame}
+
+\begin{frame}\frametitle{Standup-Meeting}
+  \begin{itemize}
+  \item Jeden Morgen
+  \item Erzählen was man gemacht hat. Probleme!
+  \item Wie lange hat man noch an seinem Task.
+  \item Engineerings Tasks werden verteilt.
+    \begin{itemize}
+      \item Jeder Schätzt wie lange er dafür braucht.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Standup Meeting}
+    \includegraphics[width=10cm]{standup.jpg}
+\end{frame}
+
+
+\begin{frame}\frametitle{Gesamtübersicht}
+    \includegraphics[width=7cm]{diagramm.png}
+\end{frame}
+
+\begin{frame}
+  The End
+\end{frame}
+
+\end{document}
